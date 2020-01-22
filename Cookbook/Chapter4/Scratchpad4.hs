@@ -1,4 +1,4 @@
-module Chapter4 where
+module Chapter4.Scratchpad4 where
 
 import Data.List
 import Data.Char
