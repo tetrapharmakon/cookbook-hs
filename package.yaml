@@ -21,6 +21,9 @@ description: Please see the README on GitHub at <https://github.com/githubuser/c
 
 dependencies:
     - base >= 4.7 && < 5
+    - directory
+    - aeson
+    - bytestring
 
 library:
     source-dirs: Cookbook
@@ -35,6 +38,9 @@ executables:
             - -with-rtsopts=-N
         dependencies:
             - cookbook-hs
+            - directory
+            - aeson
+            - bytestring
 
 tests:
     cookbook-hs-test:

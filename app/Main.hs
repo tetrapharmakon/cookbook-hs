@@ -1,5 +1,7 @@
 module Main where
 
+import qualified Data.ByteString.Lazy as B
+
 import Chapter1.Scratchpad1
 import Chapter10.Scratchpad10
 import Chapter11.Scratchpad11
@@ -14,4 +16,10 @@ import Chapter8.Scratchpad8
 import Chapter9.Scratchpad9
 
 main :: IO ()
-main = putStrLn "aeiou"
+main = do
+  name <- getArgs
+  input <- B.readFile $ head name --"app/gauss.json"
+  let mm = decode input :: Maybe Mathematician
+  case mm of
+    Nothing -> print "error parsing JSON"
+    Just m -> (putStrLn . greet) m
