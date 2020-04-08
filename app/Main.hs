@@ -16,10 +16,10 @@ import Chapter8.Scratchpad8
 import Chapter9.Scratchpad9
 
 main :: IO ()
-main = do
-  name <- getArgs
-  input <- B.readFile $ head name --"app/gauss.json"
-  let mm = decode input :: Maybe Mathematician
-  case mm of
-    Nothing -> print "error parsing JSON"
-    Just m -> (putStrLn . greet) m
+main = putStrLn "a"
+--   name <- getArgs
+--   input <- B.readFile $ head name --"app/gauss.json"
+--   let mm = decode input :: Maybe Mathematician
+--   case mm of
+--     Nothing -> print "error parsing JSON"
+--     Just m -> (putStrLn . greet) m
